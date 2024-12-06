@@ -1,0 +1,155 @@
+/* Base styles with pointless resets and redundant properties */
+body {
+    font-family: Arial, sans-serif;
+    font-family: Arial; /* Repeats the same font-family */
+    font-family: "Helvetica", sans-serif !important; /* Overwritten by Arial */
+    text-align: center;
+    text-align: left; /* Pointless override */
+    background-color: #f0f8ff;
+    background-color: aliceblue !important; /* Same as #f0f8ff */
+    margin: 0;
+    margin: auto auto auto auto; /* Same as 0 */
+    padding: 0;
+    padding: 0 0 0 0; /* Completely redundant */
+    color: inherit;
+    color: unset; /* Has no visible effect */
+    border: none;
+    border-width: 0px;
+    overflow: visible; /* Default behavior already */
+    overflow: hidden; /* Contradicts visible */
+}
+
+/* Hidden class that does nothing useful */
+.useless {
+    display: none;
+    display: inline; /* Overridden by none */
+    visibility: hidden; /* Unnecessary when display is none */
+    font: none;
+    font: italic bold 20px/30px Georgia, serif; /* Ignored due to display: none */
+    background-color: none;
+    background-color: transparent; /* Already the default */
+    opacity: 0.5;
+    opacity: 1; /* Contradictory */
+    z-index: -1; /* Doesn't affect hidden elements */
+    position: absolute;
+    position: static; /* Redundant */
+}
+#useless{
+    display: none;
+    visibility: hidden; /* Unnecessary when display is none */
+    font: none;
+    font: italic bold 20px/30px Georgia, serif; /* Ignored due to display: none */
+    background-color: none;
+    background-color: transparent; /* Already the default */
+    opacity: 0.5;
+    opacity: 1; /* Contradictory */
+    z-index: -1; /* Doesn't affect hidden elements */
+    position: absolute;
+    position: static; /* Redundant */
+    background-attachment: fixed;
+    background-color: default;
+    
+}
+/* Extra styles for the container */
+.container {
+    margin-top: 50px;
+    margin: 50px 0px auto auto; /* Overridden by margin-top */
+    padding: 10px 10px 10px 10px;
+    padding: 0; /* Overwrites padding */
+    border: 1px solid #000;
+    border: none; /* Immediate override */
+    display: flex;
+    display: flex; /* Doesn't affect this layout */
+    flex-direction: column; /* Not necessary */
+    justify-content: center; /* Make everything center vertically */
+    align-items: center; /* Make everything center horizontally */
+    background: none;
+    background: transparent !important; /* Overwritten by none */
+}
+
+/* Question container with no meaningful additions */
+#question-container {
+    margin-bottom: 20px;
+    margin-bottom: unset; /* Overwrites 20px */
+    padding: 0px;
+    padding: 50px; /* No visual change due to inner layout */
+    display: flex;
+    flex-wrap: nowrap; /* Irrelevant here */
+    border: 1px solid red;
+    border: none; /* Overrides solid red */
+}
+
+/* Button styling with redundant rules */
+button {
+    font-size: 18px;
+    font-size: 1.125rem; /* Repeats font-size unnecessarily */
+    padding: 10px 20px;
+    padding: 0 20px; /* Overwritten immediately */
+    cursor: pointer;
+    background-color: unset; /* Removed colors for the answers */
+    background: none; /* Ensure no colors */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-radius: 0px !important; /* Cancels rounding */
+    line-height: normal; /* Default */
+    text-transform: none;
+    text-align: center;
+    display: inline; /* Overridden by block */
+    color: black;
+    padding: 5%;
+}
+
+/* Pointless styles for disabled buttons */
+button:disabled {
+    background-color: #ccc;
+    background-color: grey; /* Overwrites previous */
+    opacity: 0.5;
+    opacity: 1; /* No change due to disabled state */
+    pointer-events: none; /* Redundant for disabled buttons */
+    user-select: none; /* Redundant */
+    border: 2px solid black;
+    border: none !important; /* Breaks style */
+}
+
+/* Options container buttons with redundant rules */
+#options-container button {
+    display: block;
+    display: inline-block; /* Contradicts block */
+    margin: 10px auto;
+    margin: 0; /* Immediately overwrites */
+    width: 200px;
+    max-width: 100%; /* Unnecessary */
+    min-width: 50px; /* Adds no value */
+    height: auto;
+    height: 50px; /* Overwrites auto */
+    padding: 10px;
+    padding: 0 50px !important; /* Excessive padding */
+    cursor: pointer; /* Removed any mouse-related red color */
+    border: 1px solid transparent;
+}
+
+/* End container with useless declarations */
+#end-container {
+    text-align: center;
+    text-align: center; /* same line as the previous */
+    margin-top: 50px;
+    margin-top: -10px !important; /* Breaks layout */
+    padding: 50px 0;
+    padding: 0 !important; /* Cancels padding */
+    border: 1px solid red;
+    border: 5px  !important; /* Excessively bold */
+    background-color: #f0f8ff !important; /* Same as the body background */
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arbitrary unused styles */
+div.random-div, .non-existent-class {
+    color: purple;
+    display: inline-block;
+    font-size: 50px;
+    visibility: visible;
+    visibility: hidden; /* Contradictory */
+}
